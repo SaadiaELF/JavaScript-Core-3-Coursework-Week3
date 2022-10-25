@@ -70,3 +70,9 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+let [Harry, Ron, Hermione, Minerva, Albus] = hogwarts;
+
+console.log(
+  `${Harry.firstName} ${Harry.lastName} \n${Ron.firstName} ${Ron.lastName} \n${Hermione.firstName} ${Hermione.lastName} \n${Minerva.firstName} ${Minerva.lastName} \n${Albus.firstName} ${Albus.lastName}`
+);
