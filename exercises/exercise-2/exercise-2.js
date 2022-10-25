@@ -73,9 +73,7 @@ let hogwarts = [
 
 // Task 1
 function GryffindorHouse(arr) {
-  let [...gryffindors] = arr.filter(
-    (person) => person.house === "Gryffindor"
-  );
+  let [...gryffindors] = arr.filter((person) => person.house === "Gryffindor");
 
   return [...gryffindors].forEach((person) => {
     console.log(`${person.firstName} ${person.lastName}`);
@@ -86,13 +84,13 @@ GryffindorHouse(hogwarts);
 
 // Task 2
 function teachersWithPets(arr) {
-  let teachers = arr.filter(
+  let [...teachers] = arr.filter(
     (person) => person.occupation === "Teacher" && person.pet !== null
   );
-  let [Albus] = teachers;
-
-  return `${Albus.firstName} ${Albus.lastName}`;
+  return [...teachers].forEach((person) => {
+    console.log(`${person.firstName} ${person.lastName}`);
+  });
 }
 
 console.log(`\n--- Task 2 ---`);
-console.log(teachersWithPets(hogwarts));
+teachersWithPets(hogwarts);
