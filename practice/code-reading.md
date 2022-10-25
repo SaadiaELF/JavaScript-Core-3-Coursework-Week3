@@ -15,7 +15,8 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+- The line 4 print the variable inside the scope (2) when the function is called
+- The line 6 print the variable in the global scope because the inner variable is not accessible (1)
 ## Question 2
 
 Take a look at the following code:
@@ -34,7 +35,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
-
+- `console.log(f1())` will print 10 taking the value from the global scope
+- `console.log(y)` will print undefined because the variable is inside the function scope and the console.log() is outside the function scope
 ## Question 3
 
 Take a look at the following code:
@@ -48,7 +50,7 @@ function f1(val) {
 }
 
 f1(x);
-console.log(x);
+console.log(x); 
 
 const y = { x: 9 };
 
@@ -58,7 +60,9 @@ function f2(val) {
 }
 
 f2(y);
-console.log(y);
+console.log(y); 
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+- `console.log(x)` will print 9 because x is a constant
+- `console.log(y)` will print `y = { x: 10 }` because objects are mutable;
